@@ -155,6 +155,13 @@ public class Shop {
             int newStock = stock + product.getStock();
             product.setStock(newStock);
             System.out.println("El stock del producto " + name + " ha sido actualizado a " + product.getStock());
+            // ask for stock
+            System.out.print("Seleccione la cantidad a añadir: ");
+            double price = scanner.nextInt();
+            // update stock product
+            double newPrice = price + product.getWholesalerPrice();
+            product.setWholesalerPrice(newPrice);
+            System.out.println("El precio del producto " + name + " ha sido actualizado a " + product.getWholesalerPrice());
 
         } else {
             System.out.println("No se ha encontrado el producto con nombre " + name);
